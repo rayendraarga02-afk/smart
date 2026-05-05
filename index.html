@@ -1,0 +1,62 @@
+export default function SketchLayoutMockup() {
+  const sections = [
+    {
+      title: 'Short Pilgrimage System',
+      subtitle: 'Alur pendaftaran • pembayaran • resit',
+      className: 'bg-green-400 text-orange-200 h-40',
+    },
+    {
+      title: 'Smart Information',
+      subtitle: 'Crowd • feedback • info',
+      className: 'bg-white border-4 border-red-500 text-green-500 h-28',
+    },
+    {
+      title: 'QR Sejarah',
+      subtitle: 'Informasi sejarah',
+      className: 'bg-white border-4 border-yellow-200 text-black h-28',
+    },
+    {
+      title: 'Digital Storytelling',
+      subtitle: 'Konten interaktif & edukasi',
+      className: 'bg-white border-4 border-yellow-200 text-black h-40',
+    },
+    {
+      title: 'Smart Crowd Management',
+      subtitle: 'Monitoring pengunjung',
+      className: 'bg-white border-4 border-red-500 text-green-500 h-28',
+    },
+    {
+      title: 'Jumlah Data Pengunjung',
+      subtitle: 'Realtime visitor data',
+      className: 'bg-white border-4 border-yellow-400 text-black h-32',
+    },
+    {
+      title: 'Jadwal Ziarah',
+      subtitle: 'Kalender & agenda',
+      className: 'bg-white border-4 border-yellow-400 text-black h-28',
+    },
+    {
+      title: 'Denah Alun-Alun',
+      subtitle: 'Peta lokasi',
+      className: 'bg-white border-4 border-yellow-400 text-black h-24',
+    },
+  ]
+
+  return (
+    <div className="min-h-screen bg-neutral-100 p-6 flex justify-center">
+      <div className="w-full max-w-md space-y-5">
+        {sections.map((section, index) => (
+          <div
+            key={index}
+            className={`rounded-[32px] shadow-xl p-5 flex flex-col justify-center transition-all duration-300 hover:scale-[1.02] ${section.className}`}
+          >
+            <h2 className="text-3xl font-bold leading-tight">
+              {section.title}
+            </h2>
+            <p className="mt-2 text-sm opacity-80">{section.subtitle}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
